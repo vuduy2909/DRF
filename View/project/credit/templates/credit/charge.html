@@ -1,0 +1,36 @@
+<!-- templates/credit/charge.html -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Phí</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: #333; }
+        form { max-width: 400px; margin: 0 auto; }
+        label { display: block; margin-bottom: 5px; }
+        input, textarea { width: 100%; padding: 8px; margin-bottom: 10px; }
+        button { padding: 10px 15px; background-color: #007BFF; color: #fff; border: none; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+        a { text-decoration: none; color: #007BFF; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>Tính Phí</h1>
+    <form method="post">
+        {% csrf_token %}
+        <!-- Các trường nhập liệu cho tính phí -->
+        <label for="amount">Số tiền:</label>
+        <input type="number" id="amount" name="amount" required>
+        
+        <label for="description">Mô tả:</label>
+        <textarea id="description" name="description" rows="4" required></textarea>
+        
+        <button type="submit">Tính phí</button>
+    </form>
+    <p>
+        <a href="{% url 'credit:credit_home' %}">Quay lại Trang Chủ Credit</a>
+    </p>
+</body>
+</html>

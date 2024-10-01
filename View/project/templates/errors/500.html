@@ -1,0 +1,20 @@
+<!-- templates/errors/500.html -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>500 - Lỗi Máy Chủ Nội Bộ</title>
+    <style>
+        body { text-align: center; padding: 150px; font-family: Arial, sans-serif; }
+        h1 { font-size: 50px; color: #333; }
+        p { font-size: 20px; color: #555; }
+        a { color: #007BFF; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>500 - Lỗi Máy Chủ Nội Bộ</h1>
+    <p>Xin lỗi, có lỗi xảy ra trên server.</p>
+    <p><a href="{% url 'blog:homepage' %}">Quay lại trang chủ</a></p>
+</body>
+</html>
