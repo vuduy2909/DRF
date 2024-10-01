@@ -1,0 +1,22 @@
+<!-- blog/templates/blog/page.html -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang {{ num }}</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: #333; }
+        p { color: #555; }
+        a { text-decoration: none; color: #007BFF; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>Trang {{ num }}</h1>
+    <p>Tham số foo: {{ foo }}</p>
+    <p>
+        <a href="{% url 'blog:homepage' %}">Quay lại trang chủ</a>
+    </p>
+</body>
+</html>

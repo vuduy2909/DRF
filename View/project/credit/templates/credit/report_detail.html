@@ -1,0 +1,22 @@
+<!-- templates/credit/report_detail.html -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ report.name }}</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: #333; }
+        p { color: #555; }
+        a { text-decoration: none; color: #007BFF; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>{{ report.name }}</h1>
+    <p>{{ report.description }}</p>
+    <p>
+        <a href="{% url 'credit:report' %}">Quay lại Báo cáo</a>
+    </p>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<h1>Chào mừng đến với Shop của chúng tôi!</h1>
+
+{% if posts %}
+    <ul>
+    {% for post in posts %}
+        <li>
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.content }}</p>
+            <p><small>Đăng vào {{ post.created_at }}</small></p>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Chưa có sản phẩm nào.</p>
+{% endif %}
